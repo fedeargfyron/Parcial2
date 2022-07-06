@@ -41,7 +41,10 @@ const logOut = () => {
 
 const getInfo = async () => {
     try {
-        let response = await fetch("https://basic-server-one.vercel.app/users", { method: "GET"})
+        let response = await fetch("https://basic-server-one.vercel.app/users", { method: "GET"});
+        if(!response.ok)
+            return generateError();
+        
         let body = await response.json();
         generateDashboard(body.data);
     }
