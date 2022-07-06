@@ -17,9 +17,9 @@ const submitForm = (e) => {
         modal.classList.add("visible");
         setTimeout(() => {
             modal.classList.remove("visible");
-          }, 1000);
+          }, 2500);
     });
 }
 window.onload = () => {
-    document.getElementById("submitBtn").addEventListener("click", submitForm);
+    document.getElementById("login-form").addEventListener("submit", submitForm);
 }

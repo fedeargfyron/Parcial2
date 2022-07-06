@@ -60,7 +60,8 @@ label{
     margin-bottom: 60px;
     margin-top: 10px;
     width: 100%;
-    padding: 3rem;
+    padding: 2rem;
+    border: 2px solid var(--main-color-hover);
 }
 
 .row-container{
@@ -87,12 +88,6 @@ label{
     padding: .25rem;
 }
 
-.login-main h1{
-    font-size: 1.75rem;
-    padding: 1rem;
-    font-weight: bold;
-}
-
 .modal-error{
     position: absolute;
     left: 50%;
@@ -103,11 +98,18 @@ label{
     background: var(--transparent-background);
     border-radius: 8px;
     display: none;
+    border: 2px solid var(--main-color-hover);
 }
 
 .visible{
     display: block;
+    animation: fadeIn 0.1s ease-in;
 }
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
 
 @media only screen and (min-width: 768px){
     .login-main{
