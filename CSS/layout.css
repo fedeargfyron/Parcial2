@@ -37,7 +37,7 @@ header a{
 }
 
 header a:hover,
-.fa-bars:hover{
+.icon:hover{
     cursor: pointer;
     color: var(--main-color-hover);
     transition: var(--hover-transition);
