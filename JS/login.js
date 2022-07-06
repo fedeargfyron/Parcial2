@@ -7,7 +7,7 @@ const generateError = () => {
 }
 
 const redirect = () => {
-    let url = "../dashboard.html";
+    let url = "./dashboard.html";
     return window.location = url;
 }
 

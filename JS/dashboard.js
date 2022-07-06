@@ -30,7 +30,7 @@ const generateDashboard = (data) => {
 }
 
 const redirect = () => {
-    let url = "../login.html";
+    let url = "./login.html";
     window.location = url;
 }
 
