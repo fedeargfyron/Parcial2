@@ -1,4 +1,4 @@
-let headers = ["id", "email", "phone", "username", "website"]
+let headers = ["id", "username", "email", "phone", "website"]
 
 const generateError = () => {
     document.getElementById('modal-error').classList.add("visible");
