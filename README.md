@@ -1,7 +1,7 @@
 # Aplicación
 
-Se desarrolló una aplicación web con el objetivo de obtener información en un tablero
-de los usuarios siempre y cuando el usuario esté logueado.
+Se desarrolló una aplicación web con el objetivo de obtener información de los usuarios
+almacenados y mostrarlos en un tablero siempre y cuando el usuario esté logueado.
 # Manejo de login
 
 Se conserva el email del usuario en el LocalStorage
