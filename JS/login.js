@@ -33,7 +33,7 @@ const submitForm = async (e) => {
 
 window.onload = () => {
     if(localStorage.getItem("Logged")){
-        redirect();
+        return redirect();
     }
 
     document.getElementById("login-form").addEventListener("submit", submitForm);

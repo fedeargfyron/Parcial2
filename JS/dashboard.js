@@ -4,17 +4,6 @@ const generateError = () => {
     document.getElementById('modal-error').classList.add("visible");
 }
 
-const getInfo = async () => {
-    try {
-        let response = await fetch("https://basic-server-one.vercel.app/users", { method: "GET"})
-        let body = await response.json();
-        generateDashboard(body.data);
-    }
-    catch(err){
-        generateError();
-    }
-}
-
 const createHeaderRow = () => {
     let firstRow = document.createElement("tr");
     headers.forEach(x => {
@@ -40,6 +29,32 @@ const generateDashboard = (data) => {
 
 }
 
+const redirect = () => {
+    let url = "../login.html";
+    window.location = url;
+}
+
+const logOut = () => {
+    localStorage.removeItem("Logged");
+    redirect();
+}
+
+const getInfo = async () => {
+    try {
+        let response = await fetch("https://basic-server-one.vercel.app/users", { method: "GET"})
+        let body = await response.json();
+        generateDashboard(body.data);
+    }
+    catch(err){
+        generateError();
+    }
+}
+
 window.onload = async () => {
+    if(!localStorage.getItem("Logged")){
+        return redirect();
+    }
+
     await getInfo();
+    document.getElementById("logout").addEventListener("click", logOut)
 }
