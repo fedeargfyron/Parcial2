@@ -1,0 +1,113 @@
+:root {
+    --input-background: #e4eff8;
+    --text-color: rgb(0,0,0);
+    --error-background: #ffa69e;
+    --error-label: #ffa69e;
+    --radius-50: 50px;
+    --padding-1: 1rem;
+}
+
+::placeholder {
+    color: var(--text-color);
+}
+
+body{
+    background-image: url("../Images/background1.jpg");
+    background-size: cover;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+}
+
+input{
+    font-family: var(--main-font);
+    font-weight: bold;
+    border-radius: var(--radius-50);
+    background-color: var(--input-background);
+}
+
+input[type=text]{
+    border: unset;
+    color: var(--text-color);
+    padding: var(--padding-1);
+    margin: .5rem .25rem;
+}
+
+button{
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border: unset;
+    border-radius: var(--radius-50);
+    padding: var(--padding-1) 2rem;
+    cursor: pointer;
+}
+
+label{
+    margin-left: 1rem;
+    color: var(--input-background);
+}
+
+.login-main{
+    display: flex;
+    width: 100%;
+    margin: auto;
+}
+
+.login-form{
+    background-color: var(--transparent-background);
+    margin-bottom: 60px;
+    margin-top: 10px;
+    width: 100%;
+    padding: 3rem;
+}
+
+.row-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.input-container{
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align:start;
+    padding: .25rem;
+}
+
+.input-container > label{
+    color: var(--error-label);
+    max-width: fit-content;
+    display: none;
+}
+
+.input-container fieldset{
+    padding: .25rem;
+}
+
+.visible{
+    display: block !important;
+}
+
+.error{
+    background-color: var(--error-background);
+}
+
+.login-main h1{
+    font-size: 1.75rem;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+@media only screen and (min-width: 768px){
+    .login-main{
+        max-width: fit-content;
+        border-radius: 10px;
+    }
+
+    .login-form{
+        border-radius: 10px;
+    }
+}
