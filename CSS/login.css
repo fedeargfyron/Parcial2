@@ -87,18 +87,26 @@ label{
     padding: .25rem;
 }
 
-.visible{
-    display: block !important;
-}
-
-.error{
-    background-color: var(--error-background);
-}
-
 .login-main h1{
     font-size: 1.75rem;
     padding: 1rem;
     font-weight: bold;
+}
+
+.modal-error{
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    font-weight: bold;
+    background: var(--transparent-background);
+    border-radius: 8px;
+    display: none;
+}
+
+.visible{
+    display: block;
 }
 
 @media only screen and (min-width: 768px){

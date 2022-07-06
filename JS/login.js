@@ -13,7 +13,11 @@ const submitForm = (e) => {
             let url = "../dashboard.html";
             return window.location = url;
         }
-        //Mostrar cartel error
+        const modal = document.getElementById('modal-error');
+        modal.classList.add("visible");
+        setTimeout(() => {
+            modal.classList.remove("visible");
+          }, 1000);
     });
 }
 window.onload = () => {
