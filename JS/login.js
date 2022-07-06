@@ -6,8 +6,7 @@ const generateError = () => {
         }, 2500);
 }
 
-const redirect = (email) => {
-    localStorage.setItem("Logged", email);
+const redirect = () => {
     let url = "../dashboard.html";
     return window.location = url;
 }
@@ -25,12 +24,17 @@ const submitForm = async (e) => {
         if(!response.ok)
             return generateError();
 
-        redirect(email);
+        localStorage.setItem("Logged", email);
+        redirect();
     } catch (err){
         generateError();
     }
 }
 
 window.onload = () => {
+    if(localStorage.getItem("Logged")){
+        redirect();
+    }
+
     document.getElementById("login-form").addEventListener("submit", submitForm);
 }
