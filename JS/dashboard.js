@@ -1,7 +1,7 @@
 let headers = ["id", "email", "phone", "username", "website"]
 
-const generateError = (err) => {
-    console.log(err)
+const generateError = () => {
+    document.getElementById('modal-error').classList.add("visible");
 }
 
 const getInfo = async () => {
@@ -11,7 +11,7 @@ const getInfo = async () => {
         generateDashboard(body.data);
     }
     catch(err){
-        generateError(err);
+        generateError();
     }
 }
 

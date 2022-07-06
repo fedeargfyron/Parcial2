@@ -27,7 +27,7 @@ const submitForm = async (e) => {
 
         redirect(email);
     } catch (err){
-        generateError()
+        generateError();
     }
 }
 

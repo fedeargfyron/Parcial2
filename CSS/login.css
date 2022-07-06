@@ -51,29 +51,6 @@ button{
     padding: .25rem;
 }
 
-.modal-error{
-    position: absolute;
-    left: 50%;
-    top: 25%;
-    transform: translate(-50%, -50%);
-    padding: 2rem;
-    font-weight: bold;
-    background: var(--transparent-background);
-    border-radius: 8px;
-    display: none;
-    border: 2px solid var(--main-color-hover);
-}
-
-.visible{
-    display: block;
-    animation: fadeIn 0.1s ease-in;
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-
 @media only screen and (min-width: 768px){
     .login-main{
         max-width: fit-content;
