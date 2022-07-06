@@ -1,6 +1,6 @@
 table {
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: normal;
     border: none;
     border-collapse: collapse;
@@ -15,7 +15,7 @@ table td, table th {
 }
 
 table td, table th {
-    border-right: 1px solid var(--main-color);
+    border-right: 1px solid var(--main-color-hover);
 }
 
 table td:last-child, 
